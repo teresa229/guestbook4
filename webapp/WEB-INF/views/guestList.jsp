@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<form action = "/guestbook4/guestbook/insert" method ="get">
+		<form action = "${pageContext.request.contextPath}/guestbook/insert" method ="get">
 			
 			<table border ="1">
 			<tr>
@@ -35,7 +35,7 @@
 					<td>${gvo.no}</td>                                                         <!-- guestList.get(i).getNo() --> 
 					<td>${gvo.name}</td>                                                       <!-- guestList.get(i).getName() -->
 					<td>${gvo.regDate}</td>                                                    <!-- guestList.get(i).getRegDate() -->
-					<td><a href="/guestbook4/guestbook/deleteForm?no=${gvo.no}">삭제</a></td>   <!-- guestList.get(i).getNo() -->
+					<td><a href="${pageContext.request.contextPath}/guestbook/deleteForm?no=${gvo.no}">삭제</a></td>   <!-- guestList.get(i).getNo() -->
 				</tr>
 				<tr>
 					<td colspan = "4">${gvo.content}</td>                                      <!-- guestList.get(i).getContent() -->

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<form action="/guestbook4/guestbook/delete" method="get">
+		<form action="${pageContext.request.contextPath}/guestbook/delete" method="get">
 			비밀번호 : <input type = "password" name="password">
 			<c:if test="${requestScope.result == 0}">
 				<p>비밀번호를 잘못 입력하셨습니다.</p>
@@ -18,6 +18,6 @@
 			<input type="hidden" name="no" value="${param.no}">		
 		</form>
 		<br>
-		<a href="/guestbook4/guestbook/list">메인으로 돌아가기</a>
+		<a href="${pageContext.request.contextPath}/guestbook/list">메인으로 돌아가기</a>
 </body>
 </html>
